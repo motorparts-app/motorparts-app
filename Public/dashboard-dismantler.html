@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dismantler Dashboard — motorparts.io</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #0d1a26;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #0d1a26;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+      position: sticky;
+      top: 0;
+    }
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+    .btn-logout {
+      background: #dc3545;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn-logout:hover {
+      background-color: #b02a37;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dismantler Dashboard</h1>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  <img src="/images/logo.png" alt="motorparts.io Logo" style="height: 50px;" />
+</header>
+  </header>
+  <main>
+    <h2>Incoming Requests</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Requester</th>
+          <th>Vehicle</th>
+          <th>Part</th>
+          <th>Priority</th>
+          <th>Date Submitted</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="requestsTableBody">
+        <!-- Requests will be dynamically inserted here -->
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    // Placeholder sample data — Replace with API fetch and prioritization logic
+    const requests = [
+      {
+        requester: 'Workshop A',
+        vehicle: 'Toyota Corolla 2018',
+        part: 'Front bumper',
+        priority: 'High',
+        date: '2025-05-20'
+      },
+      {
+        requester: 'Public User',
+        vehicle: 'Honda Civic 2017',
+        part: 'Side mirror',
+        priority: 'Low',
+        date: '2025-05-21'
+      }
+    ];
+
+    const tbody = document.getElementById('requestsTableBody');
+    requests.forEach(r => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${r.requester}</td>
+        <td>${r.vehicle}</td>
+        <td>${r.part}</td>
+        <td>${r.priority}</td>
+        <td>${r.date}</td>
+        <td><button onclick="respondToRequest('${r.part}', '${r.requester}')">Respond</button></td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    function respondToRequest(part, requester) {
+      alert(`Responding to request for ${part} from ${requester}`);
+      // Implement your response logic here
+    }
+
+    function logout() {
+      alert('Logging out...');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

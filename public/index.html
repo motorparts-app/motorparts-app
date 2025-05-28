@@ -3,122 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>motorparts.io — Find Auto Parts Fast</title>
+  <title>motorparts.io — Smarter Way to Find Auto Parts</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
     }
-    .header-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #0d1a26;
-      padding: 1rem 2rem;
+    header {
+      background: #0d1a26;
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
     }
-    .header-logo img {
+    header img {
       height: 60px;
     }
-    .header-title {
-      flex: 1;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .header-nav {
+    nav {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .nav-links {
-      display: flex;
+      align-items: center;
       gap: 1.5rem;
-      margin-bottom: 0.5rem;
     }
-    .nav-links a {
+    nav a {
       color: white;
       text-decoration: none;
       font-weight: 500;
     }
-    .auth-buttons a {
-      background-color: white;
+    .btn-auth {
+      background: white;
       color: #0d1a26;
       padding: 0.5rem 1rem;
-      margin-left: 0.5rem;
       border-radius: 5px;
       font-weight: bold;
       text-decoration: none;
     }
-    .auth-buttons {
+    .hero {
+      background: linear-gradient(to right, #0d1a26, #1a2a3a);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero .btn {
+      background: #ffcc00;
+      color: #0d1a26;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+    .cards {
       display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .card {
+      flex: 1 1 220px;
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+    .footer {
+      background: #f1f1f1;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+    .footer-column {
+      flex: 1 1 300px;
+      margin-bottom: 1rem;
+    }
+    .footer-center {
+      text-align: center;
+    }
+    .social-icons img {
+      width: 24px;
+      margin: 0 5px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
 <body>
 
-  <header class="header-bar">
-    <div class="header-logo">
-      <img src="/logo.png" alt="motorparts.io logo">
-    </div>
-    <div class="header-title">motorparts.io</div>
-    <div class="header-nav">
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="auth-buttons">
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-      </div>
-    </div>
+  <header>
+    <img src="/logo.png" alt="motorparts.io" />
+    <h1 style="flex: 1; text-align: center; font-size: 1.8rem; margin: 0;">motorparts.io</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn-auth">Login</a>
+      <a href="signup.html" class="btn-auth">Sign Up</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="section">
-      <h2>What is motorparts.io?</h2>
-      <p>Motorparts.io is Australia's smarter solution for finding used car parts fast. We connect everyday drivers and workshops with dismantlers across the country in real-time.</p>
-    </section>
+  <section class="hero">
+    <h1>Find Auto Parts Fast from Trusted Australian Dismantlers</h1>
+    <p>Used, OEM & aftermarket parts with instant access to hundreds of suppliers</p>
+    <a href="request.html" class="btn">Request a Part</a>
+  </section>
 
-    <section class="section">
-      <h2>Requesting a Part</h2>
-      <p>Just fill in your vehicle and part details. Your request is instantly routed to our network of verified dismantlers and workshops. Expect multiple responses and competitive offers — all within hours.</p>
-      <a href="request.html" class="btn">Request a Part Now</a>
-    </section>
+  <section>
+    <h2 style="text-align: center;">How It Works</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>1. Submit Request</h3>
+        <p>Tell us your vehicle and the part you need</p>
+      </div>
+      <div class="card">
+        <h3>2. Notified Suppliers</h3>
+        <p>Your request is sent to 250+ dismantlers instantly</p>
+      </div>
+      <div class="card">
+        <h3>3. Compare Quotes</h3>
+        <p>Receive offers and compare prices + delivery</p>
+      </div>
+      <div class="card">
+        <h3>4. Get Your Part</h3>
+        <p>Choose your offer and get it delivered or pick up</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Why Choose Us?</h2>
+  <section>
+    <h2 style="text-align: center;">Why Choose motorparts.io?</h2>
+    <div class="cards">
+      <div class="card"><h3>250+ Suppliers</h3><p>Australia-wide trusted dismantlers</p></div>
+      <div class="card"><h3>Trade Priority</h3><p>Faster access for panel shops & workshops</p></div>
+      <div class="card"><h3>Smart Matching</h3><p>AI-assisted matching ensures accuracy</p></div>
+      <div class="card"><h3>Local Support</h3><p>Australian-based customer support</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align: center;">Our Services</h2>
+    <div class="cards">
+      <div class="card"><h3>Used Parts</h3><p>Mechanical, electrical & interior components</p></div>
+      <div class="card"><h3>Panels</h3><p>Doors, guards, bumpers, bonnets</p></div>
+      <div class="card"><h3>OEM & Aftermarket</h3><p>Flexible supply based on your budget</p></div>
+      <div class="card"><h3>Business Accounts</h3><p>Trade dashboard with history & priority</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align: center;">What Our Clients Say</h2>
+    <blockquote>"We saved over $400 on a single job with Motorparts.io. Huge time-saver!" — Sarah, Brisbane Workshop</blockquote>
+    <blockquote>"Excellent communication and reliable suppliers. Highly recommend." — Tony, Sydney Panel Beater</blockquote>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h4>Pages</h4>
       <ul>
-        <li>Real-time request notifications to 250+ suppliers</li>
-        <li>Trade priority access</li>
-        <li>Wide coverage across Australia</li>
-        <li>100,000+ parts catalogued</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </section>
-
-    <section class="section">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Used parts sourcing for European vehicles</li>
-        <li>Instant quotes from dismantlers</li>
-        <li>Direct workshop-to-supplier communication</li>
-        <li>Login access for mechanics and trade users</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>What Our Clients Say</h2>
-      <blockquote>"Amazing service! We received multiple part offers within a day and saved 30% on costs!" — John from Sydney</blockquote>
-      <blockquote>"As a panel shop, this platform cuts our parts sourcing time in half!" — Karen from Melbourne</blockquote>
-    </section>
-  </main>
-
-  <footer style="text-align: center; padding: 2rem; background: #f1f1f1;">
-    &copy; 2025 motorparts.io — All rights reserved. <br>
-    support@motorparts.io | +61 123 456 789
+    </div>
+    <div class="footer-column footer-center">
+      <p>&copy; 2025 motorparts.io — All rights reserved.</p>
+      <div class="social-icons">
+        <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png"/>
+        <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png"/>
+        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>support@motorparts.io</p>
+      <p>+61 123 456 789</p>
+      <p>Melbourne, Australia</p>
+    </div>
   </footer>
 
 </body>

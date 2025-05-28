@@ -2,130 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>motorparts.io — Find Auto Parts Fast</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background-color: #0d1a26;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-    header img {
-      height: 50px;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border: 1px solid white;
-      border-radius: 4px;
-      transition: background-color 0.2s ease-in-out;
-    }
-    .nav-links a:hover {
-      background-color: white;
-      color: #0d1a26;
-    }
-    main {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(to right, #007bff, #0056b3);
-      color: white;
-    }
-    main h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    main p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-    .cta-button {
-      background-color: white;
-      color: #007bff;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      text-decoration: none;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: background-color 0.2s ease-in-out;
-    }
-    .cta-button:hover {
-      background-color: #e2e6ea;
-    }
-    section {
-      max-width: 900px;
-      margin: 3rem auto;
-      text-align: center;
-      padding: 0 1rem;
-    }
-    section h2 {
-      color: #0d1a26;
-      margin-bottom: 1rem;
-    }
-    footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #007bff;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="/logo.png" alt="motorparts.io logo" />
-    <div class="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/services.html">Services</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/login.html">Login</a>
-      <a href="/signup.html">Sign Up</a>
-    </div>
+    <img src="/logo.png" alt="motorparts.io" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
   </header>
 
   <main>
-    <p style="color: red; font-weight: bold;">This is the updated version.</p>
-    <h1>Find the Right Auto Part — Fast</h1>
-    <p>Motorparts.io connects you with trusted suppliers and dismantlers across Australia. Whether you're a mechanic, workshop, or car owner — get parts quickly and easily.</p>
-    <a href="/request.html" class="cta-button">Request a Part Now</a>
+    <section>
+      <h1>Find Auto Parts Quickly & Easily</h1>
+      <p>Connect directly with trusted dismantlers and workshops across Australia. Skip the hassle. Request a part and get matched fast.</p>
+      <a href="request.html" class="btn">Request a Part</a>
+    </section>
+
+    <section>
+      <h2>Why Choose motorparts.io?</h2>
+      <ul>
+        <li>Trusted dismantlers across Australia</li>
+        <li>Trade priority access for workshops</li>
+        <li>AI-assisted part matching</li>
+        <li>Streamlined request system</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What Our Customers Say</h2>
+      <blockquote>"Saved me hours finding the part I needed. Highly recommended!" — James R.</blockquote>
+      <blockquote>"Great service for our workshop. Fast and reliable suppliers." — Karen T.</blockquote>
+    </section>
   </main>
 
-  <section>
-    <h2>Why motorparts.io?</h2>
-    <p>We prioritize speed, accuracy, and access to the best used parts nationwide. With a growing network of professional dismantlers and real-time request handling, we’re redefining how auto parts are sourced.</p>
-  </section>
-
   <footer>
-    <p>&copy; 2025 motorparts.io — All rights reserved.</p>
-    <p>
-      <a href="/about.html">About</a> |
-      <a href="/services.html">Services</a> |
-      <a href="/contact.html">Contact</a>
-    </p>
-    <p>Email: support@motorparts.io | Phone: +61 123 456 789</p>
+    &copy; 2025 motorparts.io — All rights reserved.<br>
+    support@motorparts.io | +61 123 456 789
   </footer>
 </body>
 </html>

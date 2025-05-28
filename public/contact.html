@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — motorparts.io</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>Contact Us</h1></header>
+  <header>
+    <img src="/logo.png" alt="motorparts.io" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
   <main>
-    <p>Email: support@motorparts.io</p>
+    <h1>Contact Us</h1>
+    <p>Email: <a href="mailto:support@motorparts.io">support@motorparts.io</a></p>
     <p>Phone: +61 123 456 789</p>
-    <p>Location: Melbourne, Australia</p>
+    <p>Address: Melbourne, Australia</p>
     <form>
-      <label for="message">Send us a message:</label><br>
-      <textarea id="message" rows="5" cols="40" placeholder="Write your message here..."></textarea><br>
-      <button type="submit">Submit</button>
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" rows="5" placeholder="Write your message here..." style="width: 100%;"></textarea><br><br>
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </main>
-  <footer>&copy; 2025 motorparts.io</footer>
+  <footer>
+    &copy; 2025 motorparts.io — All rights reserved. <br>
+    support@motorparts.io | +61 123 456 789
+  </footer>
 </body>
 </html>

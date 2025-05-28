@@ -9,11 +9,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// API routes (e.g., for part requests) here...
+// Temporary in-memory storage
+let requests = [];
+let users = [];
 
-app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
-});
 // Handle new part request
 app.post('/api/requests', (req, res) => {
   requests.push(req.body);
@@ -21,7 +20,7 @@ app.post('/api/requests', (req, res) => {
   res.status(201).json({ message: 'Request received' });
 });
 
-// View requests as a simple HTML table
+// View requests in HTML table
 app.get('/requests', (req, res) => {
   let html = `
   <!DOCTYPE html>
@@ -174,6 +173,9 @@ app.post('/api/login', (req, res) => {
 
   res.json({ message: 'Login successful', user });
 });
+
+// ✅ DO NOT include wildcard route like app.get('*', ...)
+// It breaks serving static .html files by always sending index.html
 
 // Start server
 app.listen(PORT, () => {

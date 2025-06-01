@@ -1,143 +1,48 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
-}
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem;
-}
-
-.site-header {
-  background: #003366;
-  color: white;
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.logo {
-  height: 40px;
-  margin-right: 1rem;
-}
-
-.site-title {
-  font-size: 1.5rem;
-  flex-grow: 1;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-
-nav a.btn {
-  background: #007bff;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  color: white;
-  margin-left: 0.5rem;
-}
-
-nav a.btn-outline {
-  border: 1px solid #007bff;
-  color: #007bff;
-  background: none;
-}
-
-main {
-  background: white;
-  padding: 2rem;
-  margin-top: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-main h2 {
-  margin-bottom: 1rem;
-  color: #003366;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.btn {
-  background: #007bff;
-  color: white;
-  padding: 0.75rem 1.25rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  align-self: flex-start;
-}
-
-.site-footer {
-  background: #003366;
-  color: white;
-  margin-top: 2rem;
-  padding: 2rem 1rem;
-}
-
-.footer-flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-flex div {
-  flex: 1 1 30%;
-}
-
-.footer-flex ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-flex ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-flex ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-flex .center {
-  text-align: center;
-}
-
+/* === Mobile Optimization === */
 @media (max-width: 768px) {
-  .header-flex, .footer-flex {
+  header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
-
   nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
     margin-top: 1rem;
+  }
+  nav a, .auth-buttons a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .auth-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    margin-bottom: 1.5rem;
+  }
+  form input, form textarea, form select, form button {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
